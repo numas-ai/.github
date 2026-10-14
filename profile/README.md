@@ -28,6 +28,12 @@
 - 组织主页：[github.com/numas-ai](https://github.com/numas-ai)
 - 项目动态与问题反馈请通过对应仓库的 Issue 与我们联系。
 
+## QQ 交流群
+
+扫码加入 NuMas 交流群（群号：1130109735）。
+
+![NuMas 交流群](https://raw.githubusercontent.com/numas-ai/.github/main/profile/qq-group.jpg)
+
 ---
 
 感谢来访，欢迎一起把 Agent 能力做得更开放、更可掌控。

@@ -2,20 +2,35 @@
 
 > 把 AI Agent 的内核、服务与界面拆开，各自独立演进，最终交到用户自己手里。
 
+## 核心项目：numas
+
+[**numas**](https://github.com/numas-ai/numas) —— 带编程智能体的 Web IDE。
+
+- IDE 内核用 **OpenSumi**（Web + Node），智能体由 **`@opencode/sdk`** 在服务端进程内提供；
+- 前端与后端独立部署，后端地址由前端运行期配置，不写死在构建产物里；
+- 三种平级、场景隔离的运行模式：**本地模式 / 云端模式 / 实验模式**；本地模式内置 **OpenZiti** 出站隧道；
+- 业务能力以 **VSIX 插件** 接入，数据驱动（例如全景图插件按 `*.vendor` 数据渲染），底座不做业务定制。
+
+设计文档：[`docs/design.md`](https://github.com/numas-ai/numas/blob/main/docs/design.md)
+工程约定：[`AGENTS.md`](https://github.com/numas-ai/numas/blob/main/AGENTS.md)
+
+## 全部仓库
+
+| 项目 | 定位 | 说明 |
+| --- | --- | --- |
+| [**numas**](https://github.com/numas-ai/numas) | **核心** · 带编程智能体的 Web IDE | OpenSumi + `@opencode/sdk`；三种运行模式；插件化与数据驱动 |
+| [openziti](https://github.com/numas-ai/openziti) | 隧道验证 | 本地 quickstart、脚本与 Node SDK `bind` / `dial` 示例（不含二进制与凭据） |
+| [vscode-opencode](https://github.com/numas-ai/vscode-opencode) | 容器化工作台 | VS Code + opencode 的 Dockerfile、docker 配置与 VSIX 扩展 |
+| [pi](https://github.com/numas-ai/pi) | AI agent toolkit（fork） | 统一的 LLM API、agent loop、TUI 与 coding agent CLI |
+| [opencode](https://github.com/numas-ai/opencode) | 开源 coding agent（fork） | 本地优先的 Agent 服务基座，提供 API / SSE / PTY 能力 |
+
+> `pi` 与 `opencode` 是上游开源项目的 fork，版权与开源许可归属其原作者与社区。
+
 ## 我们在做什么
 
 - **Agent 内核**：沉淀可扩展的 agent harness，让工具、权限、会话与模型接入有清晰的边界，而不是堆在一个黑盒里。
 - **本地优先的服务化**：内核与部署环境解耦，既能跑在本地，也能跑在 VM / 容器里，还支持进程内嵌入。
 - **产品化界面**：前后端分离，Web 工作台与对话产品按自己的业务规则定义交互，服务端只提供 API 支撑。
-
-## 公开项目
-
-| 项目 | 定位 | 说明 |
-| --- | --- | --- |
-| [pi](https://github.com/numas-ai/pi) | AI agent toolkit | 统一的 LLM API、agent loop、TUI 与 coding agent CLI |
-| [opencode](https://github.com/numas-ai/opencode) | 开源 coding agent | 本地优先的 Agent 服务基座，提供 API / SSE / PTY 能力 |
-
-> 当前公开仓库以上游开源项目的 fork 为主，上游的版权与开源许可归属其原作者与社区。
 
 ## 参与协作
 

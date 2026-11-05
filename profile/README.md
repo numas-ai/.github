@@ -6,4 +6,4 @@
 
 🔗点击链接领取吧：[https://marketing.cloudlab.top/hqucst](https://marketing.cloudlab.top/hqucst)
 
-![](./20261105-203520.jpg)
+![](https://raw.githubusercontent.com/numas-ai/.github/main/profile/20261105-203520.jpg)

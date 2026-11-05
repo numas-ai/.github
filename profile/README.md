@@ -6,4 +6,4 @@
 
 🔗点击链接领取吧：[https://marketing.cloudlab.top/hqucst](https://marketing.cloudlab.top/hqucst)
 
-![](./20261105-203520.jpeg)
+![](./20261105-203520.jpg)
